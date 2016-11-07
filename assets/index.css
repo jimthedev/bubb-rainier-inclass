@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  transition: all 0.4s ease;
+}
+
+header {
+  border-bottom: 1px #efefef solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+logo-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+
+logo {
+  margin-top: 1rem;
+  display:inline-block;
+  width: 186px;
+  height: 42px;
+  background: url(http://www.bubb.com.br/assets/img/sprite.png) no-repeat 0 -177px;
+  text-indent: -9999px;
+}
+
+.navigation > ul {
+  list-style: none;
+  padding:0;
+  margin: 0 2rem;
+  display: flex;
+}
+
+.navigation__item {
+  flex-grow: 1;
+}
+
+.navigation__item > a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+  border-bottom: 4px solid #eee;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #4d4d4d;
+}
+
+.navigation__item > a:hover {
+  color: #3DAFCA;
+  border-color: #3498b1;
+}
+
+contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.phone {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.2;
+  font-family: 'Roboto', sans-serif;
+}
+
+.email {
+  display:block;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 1.2;
+  color: #777;
+  font-weight: lighter;
+  letter-spacing:
+}
+
+.contact-info__icon {
+  display:inline-block;
+  padding: 1rem;
+}
+
+.contact-info__icon i.fa {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.contact-info__icon:hover > i.fa {
+  color: #3DAFCA;
+}
+
+.projects__header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.0;
+}
+.projects__subheader {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  color: #aaa;
+  font-size: 15px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+photo-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+grid-item {
+  background-color: #333;
+  color: whitesmoke;
+  outline: 1px solid magenta;
+  opacity: 1.0;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.grid-description__button {
+  text-decoration: none;
+  padding: 0.75rem 4rem;
+  font-weight: bolder;
+  color: whitesmoke;
+  background-color: #8995a2;
+  width: 50%;
+  max-width: 200px;
+}
+
+.img-abs {
+  opacity: 0.5;
+}
+
+grid-description {
+  z-index: 1000;
+  position:absolute;
+  text-align: center;
+}
+
+grid-description p {
+  font-weight: bolder;
+}
+
+@media (min-width: 620px) {
+  photo-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  grid-item {
+    width: 50%;
+  }
+
+}
+
+
+@media (min-width: 700px) {
+  logo-wrapper {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+  header {
+    flex-direction: row;
+  }
+
+  contact-icons {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  contact-info {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: right;
+    flex-direction: row-reverse;
+  }
+  .navigation > ul {
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  contact-icons {
+    position: static;
+    margin-right: 1rem;
+  }
+  .contact-info__icon {
+    padding-top: .5rem;
+  }
+  photo-grid {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
